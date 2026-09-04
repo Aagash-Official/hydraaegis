@@ -12,85 +12,52 @@
     --text: #e6edf3;
     --text-dim: #9aa7b4;
     --accent: #4f8cff;
-    --accent-soft: rgba(79, 140, 255, 0.12);
+    --accent-soft: rgba(79,140,255,0.12);
     --green: #3fb950;
+    --green-soft: rgba(63,185,80,0.12);
     --orange: #e67e22;
     --purple: #bc8cff;
+    --purple-soft: rgba(188,140,255,0.12);
     --red: #e74c3c;
+    --teal: #2ecc71;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background: var(--bg); color: var(--text); line-height: 1.6;
-  }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
 
-  /* ── Header ── */
-  header {
-    padding: 100px 24px 80px; text-align: center;
-    background: radial-gradient(ellipse at top, var(--accent-soft), transparent 60%);
-    border-bottom: 1px solid var(--border);
-  }
-  .logo {
-    display: inline-flex; align-items: center; gap: 12px;
-    font-size: 28px; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 24px;
-  }
-  .logo-mark {
-    width: 36px; height: 36px; border-radius: 10px;
-    background: linear-gradient(135deg, var(--accent), #7c5cff); display: inline-block;
-  }
+  /* Header */
+  header { padding: 100px 24px 80px; text-align: center; background: radial-gradient(ellipse at top, var(--accent-soft), transparent 60%); border-bottom: 1px solid var(--border); }
+  .logo { display: inline-flex; align-items: center; gap: 12px; font-size: 28px; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 24px; }
+  .logo-mark { width: 36px; height: 36px; border-radius: 10px; background: linear-gradient(135deg, var(--accent), #7c5cff); display: inline-block; }
   header h1 { font-size: 44px; font-weight: 700; letter-spacing: -1px; max-width: 720px; margin: 0 auto 18px; }
   header p.subtitle { color: var(--text-dim); font-size: 18px; max-width: 600px; margin: 0 auto; }
 
-  /* ── Layout ── */
+  /* Layout */
   main { max-width: 960px; margin: 0 auto; padding: 80px 24px; }
   section { margin-bottom: 72px; }
   section > h2 { font-size: 26px; margin-bottom: 20px; letter-spacing: -0.3px; }
   section > p { color: var(--text-dim); font-size: 17px; max-width: 720px; }
 
-  /* ── Tool cards ── */
+  /* Tool cards */
   .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 24px; }
-  .card {
-    background: var(--bg-alt); border: 1px solid var(--border);
-    border-radius: 14px; padding: 28px;
-    cursor: pointer; transition: border-color 0.2s, transform 0.15s;
-    text-decoration: none; color: inherit; display: block;
-  }
+  .card { background: var(--bg-alt); border: 1px solid var(--border); border-radius: 14px; padding: 28px; cursor: pointer; transition: border-color 0.2s, transform 0.15s; text-decoration: none; color: inherit; display: block; }
   .card:hover { border-color: var(--accent); transform: translateY(-2px); }
-  .card .tag {
-    display: inline-block; font-size: 12px; font-weight: 600;
-    text-transform: uppercase; letter-spacing: 0.6px;
-    color: var(--accent); background: var(--accent-soft);
-    padding: 4px 10px; border-radius: 6px; margin-bottom: 14px;
-  }
+  .card .tag { display: inline-block; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.6px; color: var(--accent); background: var(--accent-soft); padding: 4px 10px; border-radius: 6px; margin-bottom: 14px; }
   .card h3 { font-size: 19px; margin-bottom: 10px; }
   .card p { font-size: 15px; color: var(--text-dim); max-width: none; }
-  .card .card-cta {
-    margin-top: 16px; font-size: 13px; color: var(--accent); font-weight: 600;
-    display: flex; align-items: center; gap: 6px;
-  }
+  .card .card-cta { margin-top: 16px; font-size: 13px; color: var(--accent); font-weight: 600; }
 
-  /* ── Flow ── */
+  /* Flow */
   .flow { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: 8px; }
   .flow-step { background: var(--bg-alt); border: 1px solid var(--border); border-radius: 10px; padding: 14px 20px; font-weight: 600; font-size: 15px; }
   .flow-arrow { color: var(--text-dim); font-size: 20px; }
 
-  /* ── Detail panel ── */
-  .detail-panel {
-    display: none;
-    background: var(--bg-alt); border: 1px solid var(--border);
-    border-radius: 16px; padding: 48px 40px; margin-top: 32px;
-    animation: fadeIn 0.25s ease;
-  }
+  /* Detail panel */
+  .detail-panel { display: none; background: var(--bg-alt); border: 1px solid var(--border); border-radius: 16px; padding: 48px 40px; margin-top: 32px; animation: fadeIn 0.25s ease; }
   .detail-panel.active { display: block; }
-  @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
-
+  @keyframes fadeIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:none; } }
   .panel-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
   .panel-title { font-size: 28px; font-weight: 700; letter-spacing: -0.5px; }
-  .close-btn {
-    background: none; border: 1px solid var(--border); border-radius: 8px;
-    color: var(--text-dim); font-size: 18px; cursor: pointer;
-    padding: 6px 12px; line-height: 1; transition: border-color 0.15s;
-  }
+  .close-btn { background: none; border: 1px solid var(--border); border-radius: 8px; color: var(--text-dim); font-size: 18px; cursor: pointer; padding: 6px 12px; line-height: 1; transition: border-color 0.15s; }
   .close-btn:hover { border-color: var(--text-dim); }
   .panel-sub { color: var(--text-dim); font-size: 16px; margin-bottom: 36px; max-width: 680px; }
 
@@ -98,6 +65,7 @@
   .metrics { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 40px; }
   .metric { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 18px 22px; flex: 1; min-width: 140px; }
   .metric .val { font-size: 26px; font-weight: 700; color: var(--accent); letter-spacing: -0.5px; }
+  .metric .val.alt { color: var(--purple); }
   .metric .lbl { font-size: 12px; color: var(--text-dim); margin-top: 3px; line-height: 1.4; }
 
   /* Layers */
@@ -111,37 +79,55 @@
   .layer.orange .layer-num { color: var(--orange); }
   .layer.purple .layer-num { color: var(--purple); }
   .layer.red    .layer-num { color: var(--red); }
+  .layer.teal   .layer-num { color: var(--teal); }
 
-  /* Adversarial table */
-  .highlight-box {
-    background: var(--bg); border: 1px solid var(--border);
-    border-left: 3px solid var(--accent); border-radius: 12px;
-    padding: 22px 26px; margin-bottom: 40px;
-  }
-  .highlight-box h4 { font-size: 15px; margin-bottom: 6px; }
-  .highlight-box p { font-size: 13px; color: var(--text-dim); margin-bottom: 14px; }
-  .adv-table { width: 100%; border-collapse: collapse; font-size: 13px; }
-  .adv-table th { text-align: left; padding: 8px 10px; color: var(--text-dim); font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 1px solid var(--border); }
-  .adv-table td { padding: 10px; border-bottom: 1px solid var(--border); }
-  .adv-table tr:last-child td { border-bottom: none; }
+  /* Tables */
+  .table-wrap { overflow-x: auto; margin-bottom: 28px; }
+  .data-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .data-table th { text-align: left; padding: 8px 12px; color: var(--text-dim); font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 1px solid var(--border); }
+  .data-table td { padding: 9px 12px; border-bottom: 1px solid var(--border); }
+  .data-table tr:last-child td { border-bottom: none; }
+  .data-table td.num, .data-table th.num { text-align: right; font-variant-numeric: tabular-nums; }
   .good  { color: var(--green);  font-weight: 600; }
   .bad   { color: var(--red);    font-weight: 600; }
   .warn  { color: var(--orange); font-weight: 600; }
+  .key   { color: var(--text);   font-family: ui-monospace, monospace; font-size: 12px; }
+
+  /* Highlight / note boxes */
+  .highlight-box { background: var(--bg); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 12px; padding: 22px 26px; margin-bottom: 28px; }
+  .highlight-box.purple { border-left-color: var(--purple); }
+  .highlight-box.green  { border-left-color: var(--green); }
+  .highlight-box.orange { border-left-color: var(--orange); }
+  .highlight-box h4 { font-size: 15px; margin-bottom: 8px; }
+  .highlight-box p { font-size: 13px; color: var(--text-dim); margin-top: 6px; line-height: 1.6; }
+
+  /* Owner bands */
+  .owner-band { display: flex; align-items: center; gap: 14px; margin-bottom: 24px; padding: 16px 20px; background: var(--bg); border: 1px solid var(--border); border-radius: 10px; }
+  .owner-badge { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; padding: 4px 12px; border-radius: 20px; white-space: nowrap; }
+  .owner-badge.blue   { color: var(--accent); background: var(--accent-soft); }
+  .owner-badge.purple { color: var(--purple); background: var(--purple-soft); }
+  .owner-band-title   { font-size: 16px; font-weight: 600; }
+
+  /* Pills */
+  .pills { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+  .pill { font-size: 12px; font-weight: 600; padding: 4px 10px; border-radius: 20px; border: 1px solid var(--border); color: var(--accent); background: var(--accent-soft); }
+  .pill.alt { color: var(--purple); background: var(--purple-soft); }
+  .pill.plain { color: var(--text-dim); background: transparent; }
+
+  /* Section labels */
+  .section-label { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--text-dim); margin-bottom: 14px; }
+  .panel-h3 { font-size: 19px; font-weight: 600; margin: 32px 0 12px; letter-spacing: -0.3px; }
+  .panel-h4 { font-size: 15px; font-weight: 600; margin: 20px 0 8px; color: var(--text); }
+  .panel-p  { font-size: 14px; color: var(--text-dim); line-height: 1.7; margin-bottom: 14px; }
 
   /* CTA */
   .cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
-  .btn {
-    display: inline-flex; align-items: center; gap: 8px;
-    padding: 13px 24px; border-radius: 10px; font-size: 14px;
-    font-weight: 600; text-decoration: none; transition: opacity 0.15s;
-  }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 24px; border-radius: 10px; font-size: 14px; font-weight: 600; text-decoration: none; transition: opacity 0.15s; }
   .btn:hover { opacity: 0.85; }
   .btn-primary { background: var(--accent); color: #fff; }
   .btn-secondary { background: transparent; color: var(--text); border: 1px solid var(--border); }
 
-  .section-label { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--text-dim); margin-bottom: 14px; }
-  .divider { border: none; border-top: 1px solid var(--border); margin: 56px 0; }
-
+  .divider { border: none; border-top: 1px solid var(--border); margin: 36px 0; }
   footer { border-top: 1px solid var(--border); padding: 40px 24px; text-align: center; color: var(--text-dim); font-size: 14px; }
   footer a { color: var(--accent); text-decoration: none; }
 </style>
@@ -156,171 +142,305 @@
 
 <main>
 
+  <!-- What we built -->
   <section>
     <h2>What we built</h2>
     <p>Hydra Aegis combines two detection tools into a single workflow. The first tool analyses files to classify malware and flag suspicious behaviour, including threats that don't match any known signature. The second tool watches network traffic to spot command-and-control activity, using anomaly detection to catch techniques that try to blend in with normal traffic.</p>
     <div class="flow" style="margin-top:28px">
-      <div class="flow-step">Detect</div>
-      <div class="flow-arrow">→</div>
-      <div class="flow-step">Investigate</div>
-      <div class="flow-arrow">→</div>
+      <div class="flow-step">Detect</div><div class="flow-arrow">→</div>
+      <div class="flow-step">Investigate</div><div class="flow-arrow">→</div>
       <div class="flow-step">Respond</div>
     </div>
   </section>
 
+  <!-- Tool cards -->
   <section>
     <h2>The tools</h2>
     <p style="margin-bottom:4px">Click a tool to learn more.</p>
     <div class="cards">
-
-      <!-- Tool 1 card — clickable -->
       <a class="card" href="#" onclick="togglePanel('tool1'); return false;">
         <span class="tag">Tool 1</span>
         <h3>Malware Classifier</h3>
         <p>Analyses executable files and scripts to identify malware families and behaviour patterns, including fileless and packed threats that traditional scanners often miss.</p>
         <div class="card-cta">Learn more →</div>
       </a>
-
-      <!-- Tool 2 card — clickable (expandable later) -->
       <a class="card" href="#" onclick="togglePanel('tool2'); return false;">
         <span class="tag">Tool 2</span>
         <h3>Network Threat Detection</h3>
         <p>Monitors network traffic for signs of command-and-control activity. Built to catch anomalies even when attackers try to evade detection, with explainable results at every step.</p>
         <div class="card-cta">Learn more →</div>
       </a>
-
     </div>
 
-    <!-- ── TOOL 1 DETAIL PANEL ── -->
+    <!-- ══ TOOL 1 PANEL ══ -->
     <div class="detail-panel" id="panel-tool1">
       <div class="panel-header">
         <div class="panel-title">Malware Classifier</div>
         <button class="close-btn" onclick="togglePanel('tool1')">✕</button>
       </div>
-      <p class="panel-sub">
-        A multi-vector detection platform built in a single Jupyter notebook with an interactive dashboard.
-        Eight detection layers working together to catch malware that static signatures miss —
-        PE files, fileless PowerShell scripts, packed executables, and adversarially crafted evasion samples.
-      </p>
+      <p class="panel-sub">A multi-vector detection platform built in a single Jupyter notebook with an interactive dashboard. Eight detection layers working together to catch malware that static signatures miss — PE files, fileless PowerShell scripts, packed executables, and adversarially crafted evasion samples.</p>
 
-      <!-- Metrics -->
       <div class="section-label">Key results</div>
       <div class="metrics">
-        <div class="metric">
-          <div class="val">97.1%</div>
-          <div class="lbl">PE classifier accuracy<br>(XGBoost, 21,752 samples)</div>
-        </div>
-        <div class="metric">
-          <div class="val">94.3%</div>
-          <div class="lbl">Fileless detector accuracy<br>(5,107 PowerShell scripts)</div>
-        </div>
-        <div class="metric">
-          <div class="val">26</div>
-          <div class="lbl">Malware families<br>classified by name</div>
-        </div>
-        <div class="metric">
-          <div class="val">0.0%</div>
-          <div class="lbl">Evasion rate after<br>adversarial hardening</div>
-        </div>
+        <div class="metric"><div class="val">97.1%</div><div class="lbl">PE classifier accuracy<br>(XGBoost, 21,752 samples)</div></div>
+        <div class="metric"><div class="val">94.3%</div><div class="lbl">Fileless detector accuracy<br>(5,107 PowerShell scripts)</div></div>
+        <div class="metric"><div class="val">26</div><div class="lbl">Malware families<br>classified by name</div></div>
+        <div class="metric"><div class="val">0.0%</div><div class="lbl">Evasion rate after<br>adversarial hardening</div></div>
       </div>
 
-      <!-- Detection layers -->
       <div class="section-label">Detection layers</div>
       <div class="layers">
-        <div class="layer blue">
-          <div class="layer-num">Layer 1</div>
-          <h4>PE Category Classifier</h4>
-          <p>XGBoost (200 trees) trained on 42 features — 27 static PE header features and 15 dynamic behavioral features. Classifies into Benign, Ransomware, RAT, Stealer, or Trojan.</p>
-        </div>
-        <div class="layer blue">
-          <div class="layer-num">Layer 2</div>
-          <h4>Family Classifier</h4>
-          <p>Identifies the specific malware family — LockBit, NanoCore, Emotet, and 23 others — once a category is established. 94.3% accuracy across 26 families.</p>
-        </div>
-        <div class="layer green">
-          <div class="layer-num">Layer 3</div>
-          <h4>Fileless / PowerShell Detector</h4>
-          <p>Separate Random Forest trained on 26 text features from raw PowerShell script content — no execution required. Catches obfuscation, memory injection, persistence, and C2 download patterns.</p>
-        </div>
-        <div class="layer orange">
-          <div class="layer-num">Layer 4</div>
-          <h4>Real .exe Scanning + Entropy + UPX</h4>
-          <p>Upload any .exe, .dll, or .zip. Shannon entropy per PE section detects packing. UPX section name fingerprinting (UPX0/UPX1) gives definitive packing confirmation independent of the ML classifier.</p>
-        </div>
-        <div class="layer red">
-          <div class="layer-num">Layer 5</div>
-          <h4>Adversarial Mimicry Attack</h4>
-          <p>A white-box mimicry attack simulating a real attacker who reads the feature set and manipulates packing ratio values. Both XGBoost and RF are hardened via adversarial retraining to near-zero evasion.</p>
-        </div>
-        <div class="layer purple">
-          <div class="layer-num">Layer 6</div>
-          <h4>SHAP Explainability</h4>
-          <p>Model-aware SHAP: TreeExplainer for XGBoost/RF, LinearExplainer for LR/SVM. Every prediction shows a waterfall chart of the top-10 features — green pushes toward the predicted class, red pushes away.</p>
-        </div>
-        <div class="layer purple">
-          <div class="layer-num">Layer 7</div>
-          <h4>Gemini AI Analyst Reports</h4>
-          <p>Gemini 2.5 Flash generates a four-section report — Threat Assessment, Key Indicators, Investigate Next, Risk Level — from SHAP values and prediction confidence. Works across all model types.</p>
-        </div>
-        <div class="layer blue">
-          <div class="layer-num">Layer 8</div>
-          <h4>VirusTotal Integration</h4>
-          <p>Hash-based lookup — no file upload to VT. Retrieves the threat label and engine count, then estimates behavioral features from the threat category to improve classifier accuracy on real malware.</p>
-        </div>
+        <div class="layer blue"><div class="layer-num">Layer 1</div><h4>PE Category Classifier</h4><p>XGBoost (200 trees) trained on 42 features — 27 static PE header features and 15 dynamic behavioral features. Classifies into Benign, Ransomware, RAT, Stealer, or Trojan.</p></div>
+        <div class="layer blue"><div class="layer-num">Layer 2</div><h4>Family Classifier</h4><p>Identifies the specific malware family — LockBit, NanoCore, Emotet, and 23 others — once a category is established. 94.3% accuracy across 26 families.</p></div>
+        <div class="layer green"><div class="layer-num">Layer 3</div><h4>Fileless / PowerShell Detector</h4><p>Separate Random Forest trained on 26 text features from raw PowerShell script content — no execution required. Catches obfuscation, memory injection, persistence, and C2 download patterns.</p></div>
+        <div class="layer orange"><div class="layer-num">Layer 4</div><h4>Real .exe Scanning + Entropy + UPX</h4><p>Upload any .exe, .dll, or .zip. Shannon entropy per PE section detects packing. UPX section name fingerprinting gives definitive packing confirmation independent of the ML classifier.</p></div>
+        <div class="layer red"><div class="layer-num">Layer 5</div><h4>Adversarial Mimicry Attack</h4><p>A white-box mimicry attack simulating a real attacker who manipulates packing ratio features. Both XGBoost and RF are hardened via adversarial retraining to near-zero evasion.</p></div>
+        <div class="layer purple"><div class="layer-num">Layer 6</div><h4>SHAP Explainability</h4><p>Model-aware SHAP: TreeExplainer for XGBoost/RF, LinearExplainer for LR/SVM. Every prediction shows a waterfall chart of the top-10 features driving the verdict.</p></div>
+        <div class="layer purple"><div class="layer-num">Layer 7</div><h4>Gemini AI Analyst Reports</h4><p>Gemini 2.5 Flash generates a four-section report — Threat Assessment, Key Indicators, Investigate Next, Risk Level — from SHAP values and prediction confidence.</p></div>
+        <div class="layer blue"><div class="layer-num">Layer 8</div><h4>VirusTotal Integration</h4><p>Hash-based lookup — no file upload to VT. Retrieves the threat label and engine count, then estimates behavioral features from the threat category to improve classifier accuracy.</p></div>
       </div>
 
-      <!-- Adversarial results -->
       <div class="highlight-box">
         <h4>Adversarial robustness — mimicry attack results</h4>
-        <p>Both models were stress-tested under a feature-space mimicry attack. XGBoost is more accurate but more vulnerable under attack — both harden to near-zero evasion after adversarial retraining.</p>
-        <table class="adv-table">
-          <thead>
-            <tr>
-              <th>Model</th><th>Baseline evasion</th><th>Under attack</th><th>After hardening</th><th>McNemar p</th>
-            </tr>
-          </thead>
+        <p>Both models stress-tested under a feature-space mimicry attack. XGBoost is more accurate but more vulnerable under attack — both harden to near-zero evasion after adversarial retraining.</p>
+        <table class="data-table" style="margin-top:14px">
+          <thead><tr><th>Model</th><th>Baseline evasion</th><th>Under attack</th><th>After hardening</th><th>McNemar p</th></tr></thead>
           <tbody>
-            <tr>
-              <td><strong>XGBoost</strong> (default)</td>
-              <td class="good">1.8%</td><td class="bad">24.3%</td><td class="good">0.0%</td><td>≈ 0.000</td>
-            </tr>
-            <tr>
-              <td><strong>Random Forest</strong></td>
-              <td class="good">4.1%</td><td class="warn">16.8%</td><td class="good">0.2%</td><td>≈ 0.000</td>
-            </tr>
+            <tr><td><strong>XGBoost</strong> (default)</td><td class="good">1.8%</td><td class="bad">24.3%</td><td class="good">0.0%</td><td>≈ 0.000</td></tr>
+            <tr><td><strong>Random Forest</strong></td><td class="good">4.1%</td><td class="warn">16.8%</td><td class="good">0.2%</td><td>≈ 0.000</td></tr>
           </tbody>
         </table>
       </div>
 
-      <!-- CTA -->
       <div class="section-label">Try it</div>
-      <p style="color:var(--text-dim);font-size:14px;margin-bottom:18px">
-        The full platform runs as a Jupyter notebook. Open in Google Colab — no local setup needed.
-        Run all cells and the interactive dashboard launches automatically.
-      </p>
+      <p class="panel-p">The full platform runs as a Jupyter notebook. Open in Google Colab — no local setup needed. Run all cells and the interactive dashboard launches automatically.</p>
       <div class="cta-row">
         <a class="btn btn-primary" href="https://colab.research.google.com" target="_blank">▶ &nbsp;Open in Google Colab</a>
         <a class="btn btn-secondary" href="#" target="_blank">↗ &nbsp;View on GitHub</a>
       </div>
     </div>
 
-    <!-- ── TOOL 2 DETAIL PANEL (placeholder) ── -->
+    <!-- ══ TOOL 2 PANEL ══ -->
     <div class="detail-panel" id="panel-tool2">
       <div class="panel-header">
         <div class="panel-title">Network Threat Detection</div>
         <button class="close-btn" onclick="togglePanel('tool2')">✕</button>
       </div>
-      <p class="panel-sub">
-        Monitors network traffic for signs of command-and-control activity using anomaly detection and
-        explainable machine learning. Catches evasion techniques that blend into normal traffic.
-      </p>
-      <p style="color:var(--text-dim);font-size:14px">
-        Full technical breakdown coming soon.
-      </p>
-    </div>
+      <p class="panel-sub">Two detectors built to fail differently — choose a component to explore.</p>
+
+      <div class="flow" style="margin-bottom:36px">
+        <div class="flow-step">Flows</div><div class="flow-arrow">→</div>
+        <div class="flow-step">Supervised RF</div><div class="flow-arrow">→</div>
+        <div class="flow-step">Host assessment</div><div class="flow-arrow">→</div>
+        <div class="flow-step">Anomaly layer</div><div class="flow-arrow">→</div>
+        <div class="flow-step">Union verdict</div>
+      </div>
+
+      <!-- Sub-cards -->
+      <div class="cards">
+        <a class="card" href="#" onclick="toggleSub('anchit'); return false;">
+          <span class="tag">Part 1</span>
+          <h3>Supervised C2 Detection</h3>
+          <p>A three-stage Random Forest pipeline over CTU-13 — flow classification, host assessment, and peer graph detection. 99.33% accuracy, out-of-fold, leak-free.</p>
+          <div class="card-cta">Explore →</div>
+        </a>
+        <a class="card" href="#" onclick="toggleSub('aagash'); return false;">
+          <span class="tag" style="color:var(--purple);background:var(--purple-soft)">Part 2</span>
+          <h3>Unsupervised Research Layer</h3>
+          <p>A benign-only autoencoder that catches what supervised learning structurally cannot see — novel families, evasion, DNS tunnelling, and host-level complementarity.</p>
+          <div class="card-cta" style="color:var(--purple)">Explore →</div>
+        </a>
+      </div>
+
+      <!-- Anchit sub-panel -->
+      <div class="detail-panel" id="panel-anchit" style="margin-top:20px">
+        <div class="panel-header">
+          <div class="panel-title" style="font-size:22px">Supervised C2 Detection</div>
+          <button class="close-btn" onclick="toggleSub('anchit')">✕</button>
+        </div>
+        <p class="panel-sub" style="font-size:14px">A multi-mechanism command-and-control detection pipeline. Five detection mechanisms working together to catch C2 traffic that any one mechanism alone would miss — flow-level classification, host-level verdicts, peer-to-peer botnet detection, jitter-resistant beaconing, and packet-level session beaconing — with cross-mechanism corroboration, MITRE ATT&amp;CK mapping, and analyst-ready incident-response plans.</p>
+
+        <div class="section-label">Key results</div>
+        <div class="metrics">
+          <div class="metric"><div class="val">R²=0.999</div><div class="lbl">Beacon caught under jitter<br>(real Trickbot, 41-day C2)</div></div>
+          <div class="metric"><div class="val">10/10</div><div class="lbl">Infected hosts caught<br>(CTU-13, 0 false positives)</div></div>
+          <div class="metric"><div class="val">6/6</div><div class="lbl">P2P botnet peers caught<br>(0 false positives)</div></div>
+          <div class="metric"><div class="val">0</div><div class="lbl">Benign false positives<br>across 216,523 flows</div></div>
+        </div>
+
+        <div class="section-label">Detection mechanisms</div>
+        <div class="layers">
+          <div class="layer blue">
+            <div class="layer-num">Stage 1</div>
+            <h4>Flow Classifier</h4>
+            <p>Random Forest over 20 per-flow features scores every flow for botnet likelihood. 94.3% recall, cross-validated over 9.5M flows.</p>
+          </div>
+          <div class="layer blue">
+            <div class="layer-num">Stage 2</div>
+            <h4>Host Verdict</h4>
+            <p>Aggregates flow scores into per-host features and flags compromised hosts. Strong evidence isolates, borderline surfaces for review, a real detection is never dismissed.</p>
+          </div>
+          <div class="layer purple">
+            <div class="layer-num">Stage 2.5</div>
+            <h4>Peer-to-Peer Botnet Detection</h4>
+            <p>Finds internal hosts acting as P2P botnet nodes by detecting external peers converging on a shared internal socket. Infers the internal network from the capture — works on any network.</p>
+          </div>
+          <div class="layer orange">
+            <div class="layer-num">Stage 2.6</div>
+            <h4>Jitter-Resistant Beacon Detector</h4>
+            <p>Catches C2 that deliberately jitters its timing to evade detection — what Cobalt Strike is built to do. Timing-regression method validated on real Trickbot (41-day C2, R²=0.9993). Port- and payload-agnostic.</p>
+          </div>
+          <div class="layer red">
+            <div class="layer-num">Session</div>
+            <h4>Packet-Level Session Beaconing</h4>
+            <p>Recovers C2 hiding inside a single persistent connection — structurally invisible to flow-level detectors. Reads raw intra-connection packet timing. Cobalt Strike TLS: 362 check-ins, R²=0.9986.</p>
+          </div>
+          <div class="layer green">
+            <div class="layer-num">Corroboration</div>
+            <h4>Cross-Mechanism Agreement</h4>
+            <p>No single mechanism is reliable, but agreement across independent mechanisms is high-confidence. A host flagged by several mechanisms is surfaced as corroborated and escalated accordingly.</p>
+          </div>
+          <div class="layer purple">
+            <div class="layer-num">Explain</div>
+            <h4>SHAP + MITRE ATT&amp;CK</h4>
+            <p>Every detection is mapped to the MITRE ATT&amp;CK technique its evidence genuinely supports. SHAP explains the ML verdict, shown only when the model actually decides.</p>
+          </div>
+          <div class="layer blue">
+            <div class="layer-num">Respond</div>
+            <h4>Incident-Response Plans</h4>
+            <p>Each suspect gets a Gemini-written containment narrative plus deployable firewall and Suricata/Snort rules. The analyst decides — manual override regenerates the rules, nothing runs automatically.</p>
+          </div>
+        </div>
+
+        <div class="highlight-box">
+          <h4>Cross-mechanism corroboration — the precision multiplier</h4>
+          <p style="font-size:13px;color:var(--text-dim);margin-bottom:14px">A host individually weak on every mechanism can still be identified with high confidence when independent mechanisms agree. On the Cobalt Strike capture, host 192.168.2.77 scored 0.00 on the ML classifier alone — yet flagged by host, beacon, and session mechanisms together, correctly identified and quarantined. Validated on six malware families with zero false positives across 216,523 benign flows.</p>
+          <table class="data-table">
+            <thead><tr><th>Capture</th><th>Malware</th><th>Mechanism</th><th>Result</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Cobalt Strike</strong></td><td>C2 framework</td><td class="good">Host + Beacon + Session</td><td>Confirmed — quarantine</td></tr>
+              <tr><td><strong>NetSupport / Remcos</strong></td><td>RAT</td><td class="good">Confirmed session C2</td><td>Confirmed — block channel</td></tr>
+              <tr><td><strong>CTU-13 P2P botnet</strong></td><td>NSIS.ay</td><td class="good">Host + Peer</td><td>3/3 infected hosts caught</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="section-label">Try it</div>
+        <p style="color:var(--text-dim);font-size:14px;margin-bottom:18px">The full platform runs as a Jupyter notebook. Upload a packet capture (pcap) or flow file, and every mechanism runs with click-to-investigate evidence panels and incident-response plans.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://colab.research.google.com" target="_blank">▶ &nbsp;Open in Google Colab</a>
+          <a class="btn btn-secondary" href="#" target="_blank">↗ &nbsp;View on GitHub</a>
+        </div>
+      </div>
+
+      <!-- Aagash sub-panel -->
+      <div class="detail-panel" id="panel-aagash" style="margin-top:20px">
+        <div class="panel-header">
+          <div class="panel-title" style="font-size:22px">Unsupervised Research Layer</div>
+          <button class="close-btn" onclick="toggleSub('aagash')">✕</button>
+        </div>
+      <div class="owner-band">
+        <span class="owner-badge purple">Aagash</span>
+        <span class="owner-band-title">The unsupervised research layer</span>
+      </div>
+      <div class="pills">
+        <span class="pill alt">Autoencoder</span>
+        <span class="pill alt">Benign-only training</span>
+        <span class="pill alt">Frozen threshold</span>
+        <span class="pill plain">CTU-13</span>
+        <span class="pill plain">IoT-23</span>
+        <span class="pill plain">DNS-Tunnel-Datasets</span>
+      </div>
+
+      <p class="panel-p">A benign-only autoencoder that never observes an attack label at any point in its lifecycle. It learns a compressed representation of ordinary traffic and flags any flow it cannot faithfully reconstruct — answering the question the supervised model cannot answer about itself: <em>what is it missing?</em></p>
+
+      <div class="highlight-box orange">
+        <h4>Architecture</h4>
+        <p style="font-family:ui-monospace,monospace;font-size:12px;line-height:1.8">
+          Input (20) → Dense(64) → Dense(32) → Dense(16) &nbsp;[encoder]<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;→ Dense(32) → Dense(64) → Dense(20) &nbsp;[decoder]<br><br>
+          ReLU activations · MSE reconstruction loss · benign flows only<br>
+          Threshold = 99th percentile of held-out benign error = 0.012839 · <strong>never retuned</strong>
+        </p>
+      </div>
+
+      <div class="section-label">Key results</div>
+      <div class="metrics">
+        <div class="metric"><div class="val alt">0.832</div><div class="lbl">AUC-ROC on CTU-13<br>zero attack labels</div></div>
+        <div class="metric"><div class="val alt">50.5%</div><div class="lbl">Botnet recall at<br>1.0% benign FPR</div></div>
+        <div class="metric"><div class="val alt">26.22%</div><div class="lbl">IoT-23 C2 recall<br>no retraining</div></div>
+        <div class="metric"><div class="val alt">94.99%</div><div class="lbl">Best unseen family<br>(DonBot, Sc 6)</div></div>
+      </div>
+
+      <div class="section-label">Four components</div>
+      <div class="layers">
+        <div class="layer purple">
+          <div class="layer-num">Component 1</div>
+          <h4>Novel C2 Anomaly Detection</h4>
+          <p>0.832 AUC on CTU-13 with zero attack labels. Tested unchanged on 325M IoT-23 flows (different network, device class, capture tool, 7 years later) — 0.8268 AUC on like-for-like task.</p>
+        </div>
+        <div class="layer purple">
+          <div class="layer-num">Component 2</div>
+          <h4>Evasion Robustness</h4>
+          <p>Under padding/high evasion: supervised RF collapses to F1 0.349. Autoencoder rises to 0.859. The attack that defeats the supervised model is the attack the unsupervised model handles best.</p>
+        </div>
+        <div class="layer purple">
+          <div class="layer-num">Component 3</div>
+          <h4>DNS Tunnel Detection</h4>
+          <p>96.77% overall recall, 72.7% ±15% on A-record tunnels (the honest figure — no record-type shortcut). AUC 0.9956 ±0.0019 across 10 seeds. Pure Python — no Zeek dependency.</p>
+        </div>
+        <div class="layer purple">
+          <div class="layer-num">Component 4</div>
+          <h4>Host-Level Complementarity</h4>
+          <p>Supervised alone: 9/10 dense infected hosts. Union (supervised ∪ unsupervised): 10/10. Additional review cost: 330 hosts, 1.24% of 26,641. One false positive — stated, not rounded away.</p>
+        </div>
+      </div>
+
+      <div class="highlight-box purple">
+        <h4>The inverse robustness finding</h4>
+        <p>Under the most severe padding attack the supervised RF's F1 <strong>collapses to 0.349</strong>. Under the same attack the autoencoder's flag rate <strong>rises to 0.859</strong>. The mechanism explains the sign: the supervised model learned botnet flows are small, so padding moves them out of the learned region. The autoencoder learned what benign looks like, so padding moves those flows further from the benign manifold.</p>
+      </div>
+
+      <div class="table-wrap">
+        <table class="data-table">
+          <caption style="text-align:left;font-size:12px;color:var(--text-dim);margin-bottom:8px">Adversarial retraining — padding vulnerability</caption>
+          <thead><tr><th>Severity</th><th class="num">Original RF recall</th><th class="num">Hardened RF recall</th><th class="num">AE flag rate</th></tr></thead>
+          <tbody>
+            <tr><td class="key">baseline</td><td class="num">0.9432</td><td class="num">0.9495</td><td class="num">0.5031</td></tr>
+            <tr><td class="key">padding, low</td><td class="num warn">0.5099</td><td class="num good">0.9788</td><td class="num">0.5031</td></tr>
+            <tr><td class="key">padding, medium</td><td class="num warn">0.3643</td><td class="num good">0.9962</td><td class="num">0.5703</td></tr>
+            <tr><td class="key">padding, high</td><td class="num bad">0.3457</td><td class="num good">0.9991</td><td class="num good">0.8596</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="highlight-box green">
+        <h4>Unseen family generalisation</h4>
+        <p>Five further CTU-13 scenarios acquired <em>after</em> the model and threshold already existed. DonBot at 94.99% is the headline result — a completely unseen family recovered at near-parity with trained families at 1.43% FPR. The Neris bracketing result is the strongest self-validation: trained Neris captures score 27.71% and 32.60%; the unseen Neris capture scored 30.01% — the detector reproduces a family's difficulty, not merely its detectability.</p>
+      </div>
+
+      <div class="table-wrap">
+        <table class="data-table">
+          <caption style="text-align:left;font-size:12px;color:var(--text-dim);margin-bottom:8px">Unseen family results — frozen threshold, no retraining</caption>
+          <thead><tr><th>Scenario</th><th>Family</th><th>Status</th><th class="num">Recall</th><th class="num">FPR</th></tr></thead>
+          <tbody>
+            <tr><td>6</td><td class="key">DonBot</td><td>unseen</td><td class="num good">94.99%</td><td class="num">1.43%</td></tr>
+            <tr><td>11</td><td class="key">RBot</td><td>seen (control)</td><td class="num good">99.78%</td><td class="num warn">7.81%</td></tr>
+            <tr><td>2</td><td class="key">Neris</td><td>unseen</td><td class="num">30.01%</td><td class="num">1.36%</td></tr>
+            <tr><td>5</td><td class="key">Virut</td><td>unseen</td><td class="num">17.20%</td><td class="num">2.09%</td></tr>
+            <tr><td>7</td><td class="key">Sogou</td><td>unseen</td><td class="num bad">0.00%</td><td class="num">1.60%</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+
+      </div><!-- end panel-aagash -->
+
+    </div><!-- end panel-tool2 -->
 
   </section>
 
+  <!-- Who we are -->
   <section>
     <h2>Who we are</h2>
     <p>We're a small team based in Middlesex, building practical, tested security tools rather than research demos. Hydra Aegis is our attempt at a platform that could genuinely be used, not just talked about.</p>
@@ -336,14 +456,22 @@
   function togglePanel(tool) {
     const panel = document.getElementById('panel-' + tool);
     const isOpen = panel.classList.contains('active');
-
-    // Close all panels first
+    // Close all top-level panels and sub-panels
     document.querySelectorAll('.detail-panel').forEach(p => p.classList.remove('active'));
-
-    // If it wasn't open, open it and scroll to it
     if (!isOpen) {
       panel.classList.add('active');
       setTimeout(() => panel.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
+    }
+  }
+
+  function toggleSub(name) {
+    const panel = document.getElementById('panel-' + name);
+    const isOpen = panel.classList.contains('active');
+    // Close all sub-panels only
+    document.querySelectorAll('#panel-anchit, #panel-aagash').forEach(p => p.classList.remove('active'));
+    if (!isOpen) {
+      panel.classList.add('active');
+      setTimeout(() => panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 50);
     }
   }
 </script>
