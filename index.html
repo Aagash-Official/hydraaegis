@@ -309,7 +309,7 @@
           <h4 style="margin-bottom:10px">Static File Scan (CSV / Row)</h4>
           <p style="font-size:13px;color:var(--text-dim);line-height:1.75;margin-bottom:14px">Upload a <strong style="color:var(--text)">CSV file</strong> of pre-extracted features or pick any row from the held-out test set using the slider. The <strong style="color:var(--text)">XGBoost classifier</strong> predicts the malware category and a second model identifies the specific <strong style="color:var(--text)">malware family</strong> — LockBit, NanoCore, Emotet, and 23 others — with the top 3 candidates and their probabilities. <strong style="color:var(--text)">SHAP</strong> then produces a waterfall chart showing exactly which of the 42 features drove the decision. <strong style="color:var(--text)">Gemini</strong> translates those SHAP values into a plain-English analyst report. The <strong style="color:var(--text)">adversarial simulation panel</strong> shows live whether the mimicry attack would fool the original model on this specific row — and whether the hardened model catches it.</p>
           <div class="demo-tags"><span class="ftag blue">Classifier + Family</span><span class="ftag purple">SHAP + Gemini</span><span class="ftag red">Adversarial simulation</span></div>
-          <div class="pipe-video-slot" style="margin-top:14px"><p style="color:var(--text-dim);font-size:13px">🎬 &nbsp;Demo video coming soon</p></div>
+          <div class="pipe-video-slot" style="margin-top:14px"><video controls width="100%" style="border-radius:8px"><source src="videos/demo_static.mp4" type="video/mp4"></video></div>
         </div>
 
         <!-- Fileless Scan -->
@@ -326,7 +326,7 @@
           <h4 style="margin-bottom:10px">Fileless Scan (.ps1)</h4>
           <p style="font-size:13px;color:var(--text-dim);line-height:1.75;margin-bottom:14px">Upload or paste a <strong style="color:var(--text)">PowerShell script</strong> and the tool analyses it as plain text — it is never executed. A feature extractor computes <strong style="color:var(--text)">26 numerical features</strong> from the raw content: average line length (the strongest signal — malicious scripts cram everything onto one enormous obfuscated line), text entropy, base64 blob count, and binary indicators for eight attack categories including download cmdlets, memory injection, persistence mechanisms, defense evasion, and execution policy bypass. A <strong style="color:var(--text)">Random Forest</strong> trained on 5,107 scripts returns a Benign / Malicious verdict with confidence, and <strong style="color:var(--text)">indicator chips</strong> show exactly which categories were triggered.</p>
           <div class="demo-tags"><span class="ftag green">26 text features</span><span class="ftag green">No execution</span><span class="ftag green">8 indicator chips</span></div>
-          <div class="pipe-video-slot" style="margin-top:14px"><p style="color:var(--text-dim);font-size:13px">🎬 &nbsp;Demo video coming soon</p></div>
+          <div class="pipe-video-slot" style="margin-top:14px"><video controls width="100%" style="border-radius:8px"><source src="videos/demo_fileless.mp4" type="video/mp4"></video></div>
         </div>
 
       </div>
