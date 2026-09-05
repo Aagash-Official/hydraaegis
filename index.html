@@ -127,6 +127,78 @@
   .btn-primary { background: var(--accent); color: #fff; }
   .btn-secondary { background: transparent; color: var(--text); border: 1px solid var(--border); }
 
+  /* Demo cards */
+  .demo-cards { display: flex; flex-direction: column; gap: 4px; margin-bottom: 28px; }
+  .demo-card {
+    display: flex; align-items: center; gap: 16px;
+    background: var(--bg); border: 1px solid var(--border);
+    border-radius: 12px; padding: 18px 20px; cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .demo-card:hover, .demo-card.active { border-color: var(--accent); background: var(--accent-soft); }
+  .demo-card-icon { font-size: 22px; min-width: 32px; text-align: center; }
+  .demo-card-text { flex: 1; }
+  .demo-card-title { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+  .demo-card-sub { font-size: 12px; color: var(--text-dim); }
+  .demo-card-arrow { font-size: 20px; color: var(--text-dim); }
+  .demo-expand {
+    display: none; background: var(--bg-alt); border: 1px solid var(--border);
+    border-left: 3px solid var(--accent); border-radius: 12px;
+    padding: 22px 26px; margin-bottom: 4px; animation: fadeIn 0.2s ease;
+  }
+  .demo-expand.active { display: block; }
+  .demo-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+
+  /* Fused flow cards */
+  .flow-cards { display: flex; flex-direction: column; gap: 0; margin-bottom: 8px; }
+  .flow-card {
+    display: flex; align-items: center; gap: 16px;
+    background: var(--bg); border: 1px solid var(--border);
+    border-radius: 12px; padding: 18px 20px; cursor: pointer;
+    margin-bottom: 4px;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .flow-card:hover, .flow-card.active { border-color: var(--accent); background: var(--accent-soft); }
+  .flow-card-num { font-size: 22px; font-weight: 800; color: var(--border); min-width: 32px; letter-spacing: -1px; }
+  .flow-card:hover .flow-card-num, .flow-card.active .flow-card-num { color: var(--accent); }
+  .flow-card-body { flex: 1; }
+  .flow-card-title { font-size: 15px; font-weight: 700; margin-bottom: 6px; }
+  .flow-card-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .ftag { font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 20px; border: 1px solid var(--border); }
+  .ftag.blue   { color: var(--accent);  background: var(--accent-soft); border-color: var(--accent); }
+  .ftag.green  { color: var(--green);   background: rgba(63,185,80,0.1); border-color: var(--green); }
+  .ftag.orange { color: var(--orange);  background: rgba(230,126,34,0.1); border-color: var(--orange); }
+  .ftag.purple { color: var(--purple);  background: var(--purple-soft); border-color: var(--purple); }
+  .flow-card-arrow { font-size: 20px; color: var(--text-dim); }
+  .flow-expand {
+    display: none; background: var(--bg-alt); border: 1px solid var(--border);
+    border-left: 3px solid var(--accent); border-radius: 12px;
+    padding: 22px 26px; margin-bottom: 8px; animation: fadeIn 0.2s ease;
+  }
+  .flow-expand.active { display: block; }
+  .flow-expand-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; font-size: 14px; font-weight: 700; color: var(--accent); }
+  .flow-expand-body { font-size: 13px; color: var(--text-dim); line-height: 1.75; margin-bottom: 14px; }
+  .flow-expand-body code { font-family: ui-monospace, monospace; font-size: 11px; background: var(--bg); padding: 2px 5px; border-radius: 4px; color: var(--accent); }
+  .flow-expand-body strong { color: var(--text); }
+  .flow-expand-out { font-size: 12px; color: var(--text-dim); background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px; margin-bottom: 14px; }
+  .out-label { color: var(--accent); font-weight: 700; }
+
+  /* Pipeline */
+  .pipeline { display: flex; align-items: center; flex-wrap: wrap; gap: 4px; margin-bottom: 12px; }
+  .pipe-step { display: flex; align-items: center; cursor: pointer; }
+  .pipe-icon { font-size: 16px; margin-right: 6px; }
+  .pipe-label { background: var(--bg); border: 1px solid var(--border); border-radius: 10px; padding: 9px 13px; font-size: 12px; font-weight: 600; transition: border-color 0.2s, background 0.2s; white-space: nowrap; }
+  .pipe-step:hover .pipe-label, .pipe-step.active .pipe-label { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); }
+  .pipe-arrow { color: var(--text-dim); font-size: 16px; padding: 0 4px; }
+  .pipe-panel { display: none; background: var(--bg); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 12px; padding: 22px 26px; margin: 8px 0 16px; animation: fadeIn 0.2s ease; }
+  .pipe-panel.active { display: block; }
+  .pipe-panel-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+  .pipe-panel-title { font-size: 15px; font-weight: 700; }
+  .pipe-panel-body { font-size: 13px; color: var(--text-dim); line-height: 1.7; margin-bottom: 14px; }
+  .pipe-panel-body code { font-family: ui-monospace, monospace; font-size: 11px; background: var(--bg-alt); padding: 2px 5px; border-radius: 4px; color: var(--accent); }
+  .pipe-panel-body strong { color: var(--text); }
+  .pipe-video-slot { background: var(--bg-alt); border: 1px solid var(--border); border-radius: 8px; padding: 20px; display: flex; align-items: center; justify-content: center; min-height: 56px; }
+
   .divider { border: none; border-top: 1px solid var(--border); margin: 36px 0; }
   footer { border-top: 1px solid var(--border); padding: 40px 24px; text-align: center; color: var(--text-dim); font-size: 14px; }
   footer a { color: var(--accent); text-decoration: none; }
@@ -195,9 +267,68 @@
         <div class="layer green"><div class="layer-num">Layer 3</div><h4>Fileless / PowerShell Detector</h4><p>Separate Random Forest trained on 26 text features from raw PowerShell script content — no execution required. Catches obfuscation, memory injection, persistence, and C2 download patterns.</p></div>
         <div class="layer orange"><div class="layer-num">Layer 4</div><h4>Real .exe Scanning + Entropy + UPX</h4><p>Upload any .exe, .dll, or .zip. Shannon entropy per PE section detects packing. UPX section name fingerprinting gives definitive packing confirmation independent of the ML classifier.</p></div>
         <div class="layer red"><div class="layer-num">Layer 5</div><h4>Adversarial Mimicry Attack</h4><p>A white-box mimicry attack simulating a real attacker who manipulates packing ratio features. Both XGBoost and RF are hardened via adversarial retraining to near-zero evasion.</p></div>
-        <div class="layer purple"><div class="layer-num">Layer 6</div><h4>SHAP Explainability</h4><p>Model-aware SHAP: TreeExplainer for XGBoost/RF, LinearExplainer for LR/SVM. Every prediction shows a waterfall chart of the top-10 features driving the verdict.</p></div>
-        <div class="layer purple"><div class="layer-num">Layer 7</div><h4>Gemini AI Analyst Reports</h4><p>Gemini 2.5 Flash generates a four-section report — Threat Assessment, Key Indicators, Investigate Next, Risk Level — from SHAP values and prediction confidence.</p></div>
-        <div class="layer blue"><div class="layer-num">Layer 8</div><h4>VirusTotal Integration</h4><p>Hash-based lookup — no file upload to VT. Retrieves the threat label and engine count, then estimates behavioral features from the threat category to improve classifier accuracy.</p></div>
+        <div class="layer purple"><div class="layer-num">Layer 6</div><h4>SHAP Explainability</h4><p>Model-aware SHAP: TreeExplainer for XGBoost/RF, LinearExplainer for LR/SVM. Every prediction shows a waterfall chart of the top-10 features — green pushes toward the predicted class, red pushes away.</p></div>
+        <div class="layer purple"><div class="layer-num">Layer 7</div><h4>Gemini AI Analyst Reports</h4><p>Gemini 2.5 Flash generates a four-section report — Threat Assessment, Key Indicators, Investigate Next, Risk Level — from SHAP values and prediction confidence. Works across all model types.</p></div>
+        <div class="layer blue"><div class="layer-num">Layer 8</div><h4>VirusTotal Integration</h4><p>Hash-based lookup — no file upload to VT. Retrieves the threat label and engine count, then estimates behavioral features from the threat category to improve classifier accuracy on real malware.</p></div>
+      </div>
+
+      <!-- DEMO CARDS -->
+      <div class="section-label" style="margin-top:40px">See it in action</div>
+      <p style="color:var(--text-dim);font-size:14px;margin-bottom:20px">Click a scan type to see how it works and watch a live demo.</p>
+
+      <div class="demo-cards">
+
+        <!-- Scan EXE File -->
+        <div class="demo-card" onclick="toggleDemo('demo1')">
+          <div class="demo-card-icon">⚙️</div>
+          <div class="demo-card-text">
+            <div class="demo-card-title">Scan .exe File</div>
+            <div class="demo-card-sub">Entropy · UPX · VirusTotal · Classifier · SHAP · Gemini · Family</div>
+          </div>
+          <div class="demo-card-arrow">›</div>
+        </div>
+        <div class="demo-expand" id="demo1">
+          <button class="close-btn" style="float:right" onclick="toggleDemo('demo1')">✕</button>
+          <h4 style="margin-bottom:10px">Scan .exe File</h4>
+          <p style="font-size:13px;color:var(--text-dim);line-height:1.75;margin-bottom:14px">Upload any <strong style="color:var(--text)">.exe</strong>, <strong style="color:var(--text)">.dll</strong>, or <strong style="color:var(--text)">.zip</strong> and the tool runs a full multi-layer scan. First it calculates <strong style="color:var(--text)">Shannon entropy</strong> per section to detect packing and checks for <strong style="color:var(--text)">UPX fingerprints</strong> — these two structural checks run independently of the ML model and catch packed malware even when the classifier is fooled. Then it looks up the file hash on <strong style="color:var(--text)">VirusTotal</strong> to get the threat label and use it to estimate the 15 behavioral features the classifier needs. The <strong style="color:var(--text)">XGBoost classifier</strong> then predicts the malware category and a second model identifies the specific <strong style="color:var(--text)">malware family</strong>. Finally <strong style="color:var(--text)">SHAP</strong> explains which features drove the decision and <strong style="color:var(--text)">Gemini</strong> writes a four-section analyst report.</p>
+          <div class="demo-tags"><span class="ftag orange">Entropy + UPX</span><span class="ftag green">VirusTotal</span><span class="ftag blue">Classifier + Family</span><span class="ftag purple">SHAP + Gemini</span></div>
+          <div class="pipe-video-slot" style="margin-top:14px"><video controls width="100%" style="border-radius:8px"><source src="videos/demo_exe.mp4" type="video/mp4"></video></div>
+        </div>
+
+        <!-- Static File Scan -->
+        <div class="demo-card" onclick="toggleDemo('demo2')">
+          <div class="demo-card-icon">🔩</div>
+          <div class="demo-card-text">
+            <div class="demo-card-title">Static File Scan (CSV / Row)</div>
+            <div class="demo-card-sub">Pre-extracted features · Classifier · Family · SHAP · Gemini · Adversarial</div>
+          </div>
+          <div class="demo-card-arrow">›</div>
+        </div>
+        <div class="demo-expand" id="demo2">
+          <button class="close-btn" style="float:right" onclick="toggleDemo('demo2')">✕</button>
+          <h4 style="margin-bottom:10px">Static File Scan (CSV / Row)</h4>
+          <p style="font-size:13px;color:var(--text-dim);line-height:1.75;margin-bottom:14px">Upload a <strong style="color:var(--text)">CSV file</strong> of pre-extracted features or pick any row from the held-out test set using the slider. The <strong style="color:var(--text)">XGBoost classifier</strong> predicts the malware category and a second model identifies the specific <strong style="color:var(--text)">malware family</strong> — LockBit, NanoCore, Emotet, and 23 others — with the top 3 candidates and their probabilities. <strong style="color:var(--text)">SHAP</strong> then produces a waterfall chart showing exactly which of the 42 features drove the decision. <strong style="color:var(--text)">Gemini</strong> translates those SHAP values into a plain-English analyst report. The <strong style="color:var(--text)">adversarial simulation panel</strong> shows live whether the mimicry attack would fool the original model on this specific row — and whether the hardened model catches it.</p>
+          <div class="demo-tags"><span class="ftag blue">Classifier + Family</span><span class="ftag purple">SHAP + Gemini</span><span class="ftag red">Adversarial simulation</span></div>
+          <div class="pipe-video-slot" style="margin-top:14px"><p style="color:var(--text-dim);font-size:13px">🎬 &nbsp;Demo video coming soon</p></div>
+        </div>
+
+        <!-- Fileless Scan -->
+        <div class="demo-card" onclick="toggleDemo('demo3')">
+          <div class="demo-card-icon">📜</div>
+          <div class="demo-card-text">
+            <div class="demo-card-title">Fileless Scan (.ps1)</div>
+            <div class="demo-card-sub">26 text features · No execution · Malicious indicator chips</div>
+          </div>
+          <div class="demo-card-arrow">›</div>
+        </div>
+        <div class="demo-expand" id="demo3">
+          <button class="close-btn" style="float:right" onclick="toggleDemo('demo3')">✕</button>
+          <h4 style="margin-bottom:10px">Fileless Scan (.ps1)</h4>
+          <p style="font-size:13px;color:var(--text-dim);line-height:1.75;margin-bottom:14px">Upload or paste a <strong style="color:var(--text)">PowerShell script</strong> and the tool analyses it as plain text — it is never executed. A feature extractor computes <strong style="color:var(--text)">26 numerical features</strong> from the raw content: average line length (the strongest signal — malicious scripts cram everything onto one enormous obfuscated line), text entropy, base64 blob count, and binary indicators for eight attack categories including download cmdlets, memory injection, persistence mechanisms, defense evasion, and execution policy bypass. A <strong style="color:var(--text)">Random Forest</strong> trained on 5,107 scripts returns a Benign / Malicious verdict with confidence, and <strong style="color:var(--text)">indicator chips</strong> show exactly which categories were triggered.</p>
+          <div class="demo-tags"><span class="ftag green">26 text features</span><span class="ftag green">No execution</span><span class="ftag green">8 indicator chips</span></div>
+          <div class="pipe-video-slot" style="margin-top:14px"><p style="color:var(--text-dim);font-size:13px">🎬 &nbsp;Demo video coming soon</p></div>
+        </div>
+
       </div>
 
       <div class="highlight-box">
@@ -239,13 +370,13 @@
       <!-- Sub-cards -->
       <div class="cards">
         <a class="card" href="#" onclick="toggleSub('anchit'); return false;">
-          <span class="tag">Part 1</span>
+          <span class="tag">Anchit</span>
           <h3>Supervised C2 Detection</h3>
           <p>A three-stage Random Forest pipeline over CTU-13 — flow classification, host assessment, and peer graph detection. 99.33% accuracy, out-of-fold, leak-free.</p>
           <div class="card-cta">Explore →</div>
         </a>
         <a class="card" href="#" onclick="toggleSub('aagash'); return false;">
-          <span class="tag" style="color:var(--purple);background:var(--purple-soft)">Part 2</span>
+          <span class="tag" style="color:var(--purple);background:var(--purple-soft)">Aagash</span>
           <h3>Unsupervised Research Layer</h3>
           <p>A benign-only autoencoder that catches what supervised learning structurally cannot see — novel families, evasion, DNS tunnelling, and host-level complementarity.</p>
           <div class="card-cta" style="color:var(--purple)">Explore →</div>
@@ -461,6 +592,48 @@
     if (!isOpen) {
       panel.classList.add('active');
       setTimeout(() => panel.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
+    }
+  }
+
+  function toggleDemo(id) {
+    const panel = document.getElementById(id);
+    const isOpen = panel.classList.contains('active');
+    document.querySelectorAll('.demo-expand').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.demo-card').forEach(c => c.classList.remove('active'));
+    if (!isOpen) {
+      panel.classList.add('active');
+      const card = panel.previousElementSibling;
+      if (card && card.classList.contains('demo-card')) card.classList.add('active');
+      setTimeout(() => panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 50);
+    }
+  }
+
+  function toggleFlow(id) {
+    const panel = document.getElementById(id);
+    const isOpen = panel.classList.contains('active');
+    // Close all flow panels
+    document.querySelectorAll('.flow-expand').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.flow-card').forEach(c => c.classList.remove('active'));
+    if (!isOpen) {
+      panel.classList.add('active');
+      // Find the card that owns this panel
+      const card = panel.previousElementSibling;
+      if (card && card.classList.contains('flow-card')) card.classList.add('active');
+      setTimeout(() => panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 50);
+    }
+  }
+
+  function togglePipe(id) {
+    const panel = document.getElementById(id);
+    const isOpen = panel.classList.contains('active');
+    document.querySelectorAll('.pipe-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.pipe-step').forEach(s => s.classList.remove('active'));
+    if (!isOpen) {
+      panel.classList.add('active');
+      const allSteps = document.querySelectorAll('.pipe-step');
+      const idx = ['pipe1','pipe2','pipe3','pipe4','pipe5','pipe6','pipe7'].indexOf(id);
+      if (idx >= 0 && allSteps[idx]) allSteps[idx].classList.add('active');
+      setTimeout(() => panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 50);
     }
   }
 
