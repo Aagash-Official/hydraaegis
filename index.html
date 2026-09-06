@@ -208,7 +208,7 @@
 
 <header>
   <div class="logo"><span class="logo-mark"></span>Hydra Aegis</div>
-  <h1>Multi-headed Detection Tool.</h1>
+  <h1>Multi-headed Detection Tool</h1>
   <p class="subtitle">Two connected tools, one goal: catch what signature-based security misses.</p>
 </header>
 
@@ -270,6 +270,7 @@
         <div class="layer purple"><div class="layer-num">Layer 6</div><h4>SHAP Explainability</h4><p>Model-aware SHAP: TreeExplainer for XGBoost/RF, LinearExplainer for LR/SVM. Every prediction shows a waterfall chart of the top-10 features — green pushes toward the predicted class, red pushes away.</p></div>
         <div class="layer purple"><div class="layer-num">Layer 7</div><h4>Gemini AI Analyst Reports</h4><p>Gemini 2.5 Flash generates a four-section report — Threat Assessment, Key Indicators, Investigate Next, Risk Level — from SHAP values and prediction confidence. Works across all model types.</p></div>
         <div class="layer blue"><div class="layer-num">Layer 8</div><h4>VirusTotal Integration</h4><p>Hash-based lookup — no file upload to VT. Retrieves the threat label and engine count, then estimates behavioral features from the threat category to improve classifier accuracy on real malware.</p></div>
+        <div class="layer teal"><div class="layer-num">Layer 9</div><h4>Model Switcher</h4><p>Switch the active classifier at any time without restarting — XGBoost (default, 97.1%), Random Forest (95.5%), Logistic Regression, SVM, or KNN. Every part of the platform updates instantly: predictions, SHAP explainer, adversarial simulation, and the Performance tab all reflect the active model. The adversarial robustness panel is shown only for tree-based models where hardened versions exist.</p></div>
       </div>
 
       <!-- DEMO CARDS -->
@@ -343,12 +344,7 @@
         </table>
       </div>
 
-      <div class="section-label">Try it</div>
-      <p class="panel-p">The full platform runs as a Jupyter notebook. Open in Google Colab — no local setup needed. Run all cells and the interactive dashboard launches automatically.</p>
-      <div class="cta-row">
-        <a class="btn btn-primary" href="https://colab.research.google.com" target="_blank">▶ &nbsp;Open in Google Colab</a>
-        <a class="btn btn-secondary" href="#" target="_blank">↗ &nbsp;View on GitHub</a>
-      </div>
+
     </div>
 
     <!-- ══ TOOL 2 PANEL ══ -->
@@ -370,13 +366,13 @@
       <!-- Sub-cards -->
       <div class="cards">
         <a class="card" href="#" onclick="toggleSub('anchit'); return false;">
-          <span class="tag">Anchit</span>
+          <span class="tag">Part 1</span>
           <h3>Supervised C2 Detection</h3>
           <p>A three-stage Random Forest pipeline over CTU-13 — flow classification, host assessment, and peer graph detection. 99.33% accuracy, out-of-fold, leak-free.</p>
           <div class="card-cta">Explore →</div>
         </a>
         <a class="card" href="#" onclick="toggleSub('aagash'); return false;">
-          <span class="tag" style="color:var(--purple);background:var(--purple-soft)">Aagash</span>
+          <span class="tag" style="color:var(--purple);background:var(--purple-soft)">Part 2</span>
           <h3>Unsupervised Research Layer</h3>
           <p>A benign-only autoencoder that catches what supervised learning structurally cannot see — novel families, evasion, DNS tunnelling, and host-level complementarity.</p>
           <div class="card-cta" style="color:var(--purple)">Explore →</div>
@@ -456,12 +452,7 @@
           </table>
         </div>
 
-        <div class="section-label">Try it</div>
-        <p style="color:var(--text-dim);font-size:14px;margin-bottom:18px">The full platform runs as a Jupyter notebook. Upload a packet capture (pcap) or flow file, and every mechanism runs with click-to-investigate evidence panels and incident-response plans.</p>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="https://colab.research.google.com" target="_blank">▶ &nbsp;Open in Google Colab</a>
-          <a class="btn btn-secondary" href="#" target="_blank">↗ &nbsp;View on GitHub</a>
-        </div>
+
       </div>
 
       <!-- Aagash sub-panel -->
